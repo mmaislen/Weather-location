@@ -17,16 +17,45 @@ const iso = t => new Date(t).toISOString().slice(0, 10);
 // Feb 29 only exists in leap years; use Feb 28 in the other years.
 export const utcDate = (y, m, d) => (m === 1 && d === 29 && new Date(Date.UTC(y, 1, 29)).getUTCMonth() !== 1) ? Date.UTC(y, 1, 28) : Date.UTC(y, m, d);
 
-async function getJSON(url, signal) {
-  const res = await fetch(url, { signal });
-  if (!res.ok) {
-    let reason = '';
-    try { reason = (await res.json()).reason || ''; } catch { /* not JSON */ }
-    const err = new Error(reason || `Weather service answered ${res.status}`);
-    err.status = res.status;
-    throw err;
+// Give up on any one request after this long; a slow answer shouldn't freeze the page.
+const TIMEOUT = 8000;
+const wait = ms => new Promise(r => setTimeout(r, ms));
+
+async function getJSON(url, signal, timeout = TIMEOUT) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeout);
+  const onAbort = () => ctrl.abort();
+  signal?.addEventListener('abort', onAbort, { once: true });
+  try {
+    let res;
+    try { res = await fetch(url, { signal: ctrl.signal }); }
+    catch (e) { throw netError(e, signal, ctrl); }
+    if (!res.ok) {
+      let reason = '';
+      try { reason = (await res.json()).reason || ''; } catch { /* not JSON */ }
+      const err = new Error(reason || `Weather service answered ${res.status}`);
+      err.status = res.status;
+      throw err;
+    }
+    try { return await res.json(); }                    // the body can stall too, so it stays under the timer
+    catch (e) { throw netError(e, signal, ctrl); }
+  } finally { clearTimeout(timer); signal?.removeEventListener('abort', onAbort); }
+}
+function netError(e, signal, ctrl) {
+  if (signal?.aborted) return e;                        // the visitor moved on; not a failure
+  const err = new Error(ctrl.signal.aborted ? 'The weather service took too long to answer.' : 'Could not reach the weather service.');
+  err.retry = true;
+  return err;
+}
+
+// Try twice before giving up: a busy or slow moment usually passes.
+async function getJSONRetry(url, signal) {
+  try { return await getJSON(url, signal); }
+  catch (e) {
+    if (signal?.aborted || !(e.retry || e.status === 429 || e.status >= 500)) throw e;
+    await wait(e.status === 429 ? 3000 : 800);
+    return getJSON(url, signal, TIMEOUT * 1.5);
   }
-  return res.json();
 }
 
 // Run async jobs a few at a time, so we stay polite to a free service.
@@ -82,7 +111,7 @@ export function createStore(place) {
   let forecastP = null;
 
   async function fetchRange(from, to, signal) {
-    const j = await getJSON(`${ARCHIVE}?latitude=${place.lat}&longitude=${place.lon}&start_date=${iso(from)}&end_date=${iso(to)}&daily=${DAILY}&${UNITS}`, signal);
+    const j = await getJSONRetry(`${ARCHIVE}?latitude=${place.lat}&longitude=${place.lon}&start_date=${iso(from)}&end_date=${iso(to)}&daily=${DAILY}&${UNITS}`, signal);
     j.daily.time.forEach((t, i) => { const r = toDay(j.daily, i, 'archive'); if (r) days.set(t, r); });
   }
 
@@ -101,7 +130,7 @@ export function createStore(place) {
   // Make sure we have PAD days either side of month/day, for every year from y0 to y1.
   async function load(y0, y1, month, day, signal, onProgress) {
     const today = Date.now(), lastArchive = today - 2 * DAY;
-    const jobs = [];
+    const jobs = [], failed = [];
     for (let y = y0; y <= y1; y++) {
       const c = utcDate(y, month, day);
       let from = null, to = null;
@@ -112,12 +141,15 @@ export function createStore(place) {
       if (from === null) continue;
       for (let t = from; t <= to; t += DAY) asked.add(iso(t));
       jobs.push(() => fetchRange(from, to, signal).catch(e => {
-        for (let t = from; t <= to; t += DAY) asked.delete(iso(t));
-        throw e;
+        for (let t = from; t <= to; t += DAY) asked.delete(iso(t)); // ask again next time
+        if (signal?.aborted) throw e;
+        failed.push(e);                                             // one missing year shouldn't sink the rest
       }));
     }
     const fc = forecast(signal).catch(() => new Map()); // the forecast is a bonus; history still works without it
     await pool(jobs, 6, onProgress);
+    // If most years failed, something bigger is wrong: say so instead of drawing a half-empty chart.
+    if (jobs.length && failed.length > jobs.length / 3) throw failed.find(e => e.status) || failed[0];
     const recent = await fc;
     const n = new Date(), todayStr = iso(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()));
     for (const [t, r] of recent) if (t < todayStr && !days.has(t)) days.set(t, r); // only days that have already happened
