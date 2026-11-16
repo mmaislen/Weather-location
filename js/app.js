@@ -1,6 +1,7 @@
 // Was it raining when you were born?
 // One watercolor stripe per year for a chosen date and place, then the next ten years sketched in pencil as odds.
 import { createStore, searchPlaces, condFrom, utcDate, WET } from './weather.js';
+import { NOTE_API } from './config.js';
 
 const MON = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const MS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -266,7 +267,36 @@ function note() {
   const hot = past.reduce((a, d) => d.hi > a.hi ? d : a), cold = past.reduce((a, d) => d.hi < a.hi ? d : a);
   const wetN = past.filter(d => d.precip >= WET).length, snowN = past.filter(d => d.snow > 0).length;
   document.getElementById('noteTitle').textContent = `${dateLabel()} in ${place.name}`;
+  document.getElementById('noteBy').hidden = true;
   document.getElementById('storyText').textContent = `Warmest in ${hot.y} (${hot.hi}°), coolest in ${cold.y} (${cold.hi}°). It ${snowN ? 'snowed or ' : ''}rained on ${wetN} of the last ${past.length} years. ${isToday(fut[0].y) ? 'Today' : 'The next one'} looks ${stats.dry >= .85 ? 'promising' : stats.dry >= .65 ? 'decent' : 'iffy'}: ${Math.round(stats.dry * 100)}% of these days stayed dry.`;
+  aiNote(hot, cold, wetN, snowN);
+}
+
+// Ask the backend for an AI-written note. Keeps the plain note if anything goes wrong.
+let noteTok = 0;
+async function aiNote(hot, cold, wetN, snowN) {
+  if (!NOTE_API) return;
+  const tok = ++noteTok, f = past[0], firstOk = f.y === start;
+  const top = (k) => past.reduce((a, d) => (d[k] > (a ? a[k] : 0) ? d : a), null);
+  const wet = top('rain'), snowy = top('snow'), tie = past.find(d => d !== hot && d.hi === hot.hi);
+  const facts = {
+    occasion: 'other', label: 'The date picked', place: place.label || place.name, date: dateLabel(),
+    firstYear: start,
+    firstDay: firstOk ? { high_f: f.hi, low_f: f.lo, rain_in: f.rain, snow_in: f.snow, sky: CONDS[f.cond] || f.cond } : { missing: true },
+    yearsOfData: past.length,
+    warmest: { year: hot.y, high_f: hot.hi, ...(tie ? { tiedWith: tie.y } : {}) }, coolest: { year: cold.y, high_f: cold.hi },
+    wettest: wet ? { year: wet.y, rain_in: wet.rain } : null, snowiest: snowy ? { year: snowy.y, snow_in: snowy.snow } : null,
+    rainyYears: wetN, snowyYears: snowN, normalHigh_f: Math.round(normal),
+    next: { year: fut[0].y, isToday: isToday(fut[0].y), dryChance_pct: Math.round(stats.dry * 100), likelyHigh_f: [fut[0].lo, fut[0].hi] },
+  };
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 12000);
+  try {
+    const r = await fetch(NOTE_API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(facts), signal: ctl.signal });
+    const j = r.ok ? await r.json() : null;
+    if (tok !== noteTok || !j?.note) return;
+    document.getElementById('storyText').textContent = j.note;
+    document.getElementById('noteBy').hidden = false;
+  } catch (e) { /* keep the plain note */ } finally { clearTimeout(timer); }
 }
 
 function renderAll() {
