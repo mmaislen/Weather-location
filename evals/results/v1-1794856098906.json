@@ -1,0 +1,883 @@
+{
+ "version": "v1",
+ "at": "2026-11-16T19:08:18.906Z",
+ "passed": 2,
+ "madeUp": 2,
+ "results": {
+  "accents": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": false,
+     "why": "missing \"Reykjavík\""
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "50 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "It snowed on January 1, 2000, with 1.2 inches and a high of 33°F. Snow has fallen on this date in 10 of the 27 years on record, and rain in 9. For 2027, the odds of a dry day are 39%, with a likely high between 26°F and 40°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "always-rain": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "Calls 1995 'first birthday' and says '32 years since', but 32 includes 1995."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "59 words, 4 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: Calls 1995 'first birthday' and says '32 years since', but 32 includes 1995."
+    }
+   },
+   "note": "It rained on your first birthday in 1995, with 4.9 inches and a high of 72°F. Every one of the 32 years since has had rain on this date, and none has had snow. The wettest was 2004 at 11.2 inches. For 2027, the odds of a dry day are 3%, with a likely high between 69°F and 75°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "any-date": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "46 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "No rain or snow fell on your first day of school, which reached a high of 81°F under partly cloudy skies. The warmest of these years hit 96°F in 2020, while 2019 stayed coolest at 70°F. The chance of a dry day in 2027 is 87%.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "below-zero": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "56 words, 4 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "Neither rain nor snow fell on that first January 20 in 1989. It was clear and sunny, with a high of -31°F. Over 38 years, 11 brought snow, and 2001 was the snowiest at 3.2 inches. The next one in 2027 has 70% odds of a dry day, with a likely high between -22°F and 20°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "big-swing": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "41 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On your first day, October 10, 1969, it snowed 3.5 inches in Denver, with a high of 28°F. That same year was the coolest and snowiest of the 58 years here. For 2027, the odds of a dry day are 83%.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "celsius-trap": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "Calls 1967 'your first birthday', but facts only show first year of data; also omits nothing else major."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "54 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: Calls 1967 'your first birthday', but facts only show first year of data; also omits nothing else major."
+    }
+   },
+   "note": "Your first birthday in 1967 was clear and sunny, with no rain or snow. Over 60 years, the warmest was 2009 at a 115°F high, while 1977 peaked at just 66°F, and 11 years brought rain. For 2027, the odds of a dry day are 82%, with a likely high between 70°F and 95°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "chicago-snow": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "49 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On January 12, 1979, it snowed 8.4 inches, with a high of 14°F. Over 48 years, snowy years (15) outnumber rainy ones (8), and the coldest year was 1982, at -6°F. For 2027, the odds of a dry day are 61%, with a likely high between 18°F and 42°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "desert-never": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "61 words, 4 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "My birthday in Calama began clear and sunny in 1981, with no rain or snow and a high of 72°F. Over 46 years, no year brought rain or snow. The warmest year was 2019 at 77°F, and the coolest was 1992 at 63°F. For 2027, the odds of a dry day are 100%, with a likely high between 67°F and 76°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "grandpa-1940": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "51 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On March 3, 1940, the first day of this record, Boston had no rain or snow. The biggest snow came in 1960, with 6.1 inches, while 1943 was the coolest, with a high of just 17°F. For 2027, the dry chance is 63%, with a likely high between 32°F and 50°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "heat-record": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "52 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On June 28, 1999, it was partly cloudy with no rain or snow. The biggest surprise came in 2021, when the high reached 108°F, while 2009 stayed much cooler with a high of 62°F. For 2027, the odds of a dry day are 86%, with a likely high between 64°F and 84°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "injection": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "58 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On October 2, 1958, it was clear and sunny, with a high of 71°F and no rain or snow. Over 69 years, rain fell in 17 of them and snow never did, and the warmest day reached 88°F in 1971. For 2027, the odds of a dry day are 79%, with a likely high between 60°F and 82°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "leap-day": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "58 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "It was clear and sunny on that first day in 1988, with no rain or snow in Denver. Snow fell in 3 of the 10 years on record, and highs have ranged from 29°F in 1996 to 63°F in 2016. The odds of a dry day in 2028 are 74%, with a likely high between 35°F and 60°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "long-name": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "51 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It rained on your first birthday in 1994, with 0.2 inches and a high of 61°F. Across 33 years, rain showed up in 14 of them, and 2012 was the warmest at 75°F. For 2027, the odds of a dry day are 57%, with a likely high between 55°F and 70°F.",
+   "pass": true,
+   "tier": "quick"
+  },
+  "low-odds": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "52 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "Your first birthday in 1977 brought no rain or snow, just partly cloudy skies and a high of 91°F. Over 50 years, 2023 ran hottest at 100°F, and 27 of these years had rain. For 2027, the odds are 31% for a dry day, with a likely high between 86°F and 95°F.",
+   "pass": true,
+   "tier": "quick"
+  },
+  "miami-storm": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "43 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On September 15, 1992, it rained, with thunderstorms and 2.31 inches. Since then, 21 of 35 years brought rain, and 2019 was the warmest at 93°F. For 2027, the odds are 42% for a dry day, with highs likely between 85°F and 92°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "missing-day": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "50 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "The record for your first birthday in 1962 is missing, so I can't say whether it rained or snowed. Over 63 years, 2016 ran warmest at 95°F and 1977 coolest at 84°F. For 2027, the odds of a dry day are 76%, with a likely high between 86°F and 94°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "phoenix-heat": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "58 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "It was clear and sunny on your first birthday in 1985, with no rain or snow and a high of 112°F. Across 42 years, only 2 had any rain, none brought snow, and the warmest high reached 116°F in 2011. For 2027, the odds of a dry day are 97%, with a likely high between 101°F and 114°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "seattle-dry": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "56 words, 4 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "Happy birthday! In 1990, your first day on this page was clear and sunny, with a high of 84°F and no rain or snow. Over 37 years, only 4 of these days were rainy, and none had snow. The odds for 2027 are 91% for a dry day, with a likely high between 71°F and 90°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "seattle-rain": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "54 words, 4 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On June 25, 1976, it rained, with 0.86 in. and a high of 64°F. Since then, the warmest was 92°F in 2015, the coolest was 58°F in 1984, and rain fell in 9 of 51 years. For 2027, the odds are 84% for a dry day, with a likely high between 66°F and 86°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "sydney-xmas": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "54 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On your birthday in 1970, it was partly cloudy with no rain or snow and a high of 79°F. Rain fell in 18 of the 56 years since, and the warmest high reached 100°F in 2015. For 2026, the odds of a dry day are 70%, with a likely high between 72°F and 90°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "thin-data": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": false,
+     "why": "54 words, 4 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "No rain or snow fell on Theo's birthday in 2024. The sky was partly cloudy, with a high of 78°F. Across three years, the warmest high was 84°F in 2025 and the coolest was 71°F in 2026, and no year was rainy or snowy. For 2027, the chance of a dry day is 88%.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "tie": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "50 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On April 18, 2001, it was clear and sunny, with no rain or snow and a high of 74°F. The warmest of these days was 88°F in 2012, tied with 2017. For 2027, there is a 72% chance of a dry day, with a likely high between 64°F and 84°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "today": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "52 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "That first day in 1981 brought rain, 0.52 inches with a high of 48°F. Rain fell in 29 of the 45 years, and no year brought snow, though 2006 was the wettest at 1.9 inches. For today, the odds of a dry day are 38%, with highs likely between 46°F and 53°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "trace": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "It rained lightly on August 2, 1983, with 0.01 inches and a high of 63°F. Rain fell in 24 of the 44 years, and the warmest was 2022 at 77°F. For 2027, the odds of a dry day are 48%, with a likely high between 58°F and 70°F.",
+   "pass": false,
+   "tier": "quick"
+  },
+  "wedding": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "60 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On September 21, 2013, the first day on this page, it was clear and sunny with no rain or snow and a high of 88°F. Over 14 years, the warmest day reached 99°F in 2020, while 2019 was the coolest at 74°F. For 2027, the chance of a dry day is 96%, with a likely high between 74°F and 96°F.",
+   "pass": false,
+   "tier": "quick"
+  }
+ }
+}
