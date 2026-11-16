@@ -1,0 +1,17 @@
+name = "weather-note"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Only these pages may call the backend.
+ALLOWED_ORIGINS = "https://mmaislen.github.io"
+
+# 10 notes a minute per visitor is plenty for a person and stops scripts.
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
+
+[observability]
+enabled = true
