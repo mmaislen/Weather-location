@@ -27,8 +27,12 @@ jobs:
           T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           C: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -z "$A" ] || [ -z "$T" ] || [ -z "$C" ]; then
-            echo "::notice::Skipping deploy. Add ANTHROPIC_API_KEY, CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID under Settings > Secrets and variables > Actions."
+          missing=""
+          [ -z "$A" ] && missing="$missing ANTHROPIC_API_KEY"
+          [ -z "$T" ] && missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -z "$C" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          if [ -n "$missing" ]; then
+            echo "::warning::Skipping deploy. Missing repository secrets:$missing (Settings > Secrets and variables > Actions)."
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
