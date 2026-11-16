@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Was It Raining When You Were Born?</title>
+<meta name="description" content="Find out what the weather was on the day you were born, see that date every year since, and the odds for the next ten.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%A7%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Patrick+Hand&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>Was it raining when you were born?</h1>
+  <p class="sub">Find out, then see the weather on that date every year since, plus the odds for the next ten. Works for anniversaries and wedding days too.</p>
+</header>
+
+<form class="picker" id="sentence" aria-label="Pick a date and place">
+  <div class="pf"><label for="date">1. Your birthday</label><input type="date" id="date" required><span class="hint">Or any date that matters to you</span></div>
+  <div class="pf"><label for="city">2. Where?</label><input id="city" list="places" type="text" autocomplete="off" spellcheck="false" placeholder="Any town or city"><datalist id="places"></datalist><span class="hint" id="cityHint">Where you were born, or live now</span></div>
+  <div class="pf"><button type="submit" class="go">Show me the weather</button><span class="hint">&nbsp;</span></div>
+</form>
+
+<div class="resulthead" id="results"><h2 class="charttitle" id="h1">&nbsp;</h2><p class="answer" id="answer"></p></div>
+
+<section>
+  <div class="chartbox">
+    <canvas id="chart" width="2200" height="800" tabindex="0" role="img" aria-label="Watercolor stripes for each past year of this date, then pencil sketches for the next ten years. Use left and right arrow keys to choose a year."></canvas>
+    <div class="tip" id="tip" hidden></div>
+    <div class="status" id="status" role="status" hidden></div>
+  </div>
+  <div class="legend">
+    <div class="k">cooler <canvas class="lg1" width="300" height="40" style="width:150px;height:20px" aria-hidden="true"></canvas> warmer than usual</div>
+    <div class="k"><canvas class="lg2" width="48" height="40" style="width:24px;height:20px" aria-hidden="true"></canvas> rain</div>
+    <div class="k">sketched = odds, not yet known</div>
+    <div class="k tapme">tap any stripe</div>
+  </div>
+</section>
+
+<section class="lower">
+  <article class="card" id="card" aria-live="polite"></article>
+  <aside class="story">
+    <h2 id="noteTitle">The story so far</h2>
+    <p id="storyText"></p>
+  </aside>
+</section>
+
+<footer>
+  <span>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>), from ERA5 reanalysis back to 1940.</span>
+  <span>Made by <a href="https://mmaislen.github.io/" target="_blank" rel="noopener">Michelle Maislen</a> · <a href="https://github.com/mmaislen/weather-location" target="_blank" rel="noopener">see the code</a></span>
+</footer>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
