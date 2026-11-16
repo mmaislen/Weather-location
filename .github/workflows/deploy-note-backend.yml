@@ -1,5 +1,5 @@
 # Deploys the AI note backend (worker/) to Cloudflare whenever it changes on main.
-# Needs three repository secrets: ANTHROPIC_API_KEY, CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID.
+# Needs three repository secrets: ANTHROPIC_API_KEY (or WEATHER_NOTE), CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID.
 name: Deploy note backend
 on:
   push:
@@ -23,12 +23,12 @@ jobs:
       - name: Check secrets are set
         id: secrets
         env:
-          A: ${{ secrets.ANTHROPIC_API_KEY }}
+          A: ${{ secrets.ANTHROPIC_API_KEY || secrets.WEATHER_NOTE }}
           T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           C: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           missing=""
-          [ -z "$A" ] && missing="$missing ANTHROPIC_API_KEY"
+          [ -z "$A" ] && missing="$missing ANTHROPIC_API_KEY (or WEATHER_NOTE)"
           [ -z "$T" ] && missing="$missing CLOUDFLARE_API_TOKEN"
           [ -z "$C" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
           if [ -n "$missing" ]; then
@@ -47,4 +47,4 @@ jobs:
           secrets: |
             ANTHROPIC_API_KEY
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY || secrets.WEATHER_NOTE }}
