@@ -1,5 +1,7 @@
 name = "weather-note"
 main = "src/index.js"
+# Account IDs are identifiers, not credentials, so this is safe to commit.
+account_id = "897beb69a695fc1b5c17369f7cf3501a"
 compatibility_date = "2026-10-01"
 compatibility_flags = ["nodejs_compat"]
 

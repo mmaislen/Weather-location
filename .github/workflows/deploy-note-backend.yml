@@ -1,5 +1,5 @@
 # Deploys the AI note backend (worker/) to Cloudflare whenever it changes on main.
-# Needs three repository secrets: ANTHROPIC_API_KEY (or WEATHER_NOTE), CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID.
+# Needs three repository secrets: ANTHROPIC_API_KEY (or WEATHER_NOTE), CLOUDFLARE_API_TOKEN. The account ID lives in worker/wrangler.toml.
 name: Deploy note backend
 on:
   push:
@@ -25,12 +25,10 @@ jobs:
         env:
           A: ${{ secrets.ANTHROPIC_API_KEY || secrets.WEATHER_NOTE }}
           T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          C: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           missing=""
           [ -z "$A" ] && missing="$missing ANTHROPIC_API_KEY (or WEATHER_NOTE)"
           [ -z "$T" ] && missing="$missing CLOUDFLARE_API_TOKEN"
-          [ -z "$C" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
           if [ -n "$missing" ]; then
             echo "::warning::Skipping deploy. Missing repository secrets:$missing (Settings > Secrets and variables > Actions)."
             echo "ready=false" >> "$GITHUB_OUTPUT"
@@ -41,7 +39,6 @@ jobs:
         if: steps.secrets.outputs.ready == 'true'
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: worker
           wranglerVersion: 4.156.0
           secrets: |
