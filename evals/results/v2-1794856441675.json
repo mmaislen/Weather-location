@@ -1,0 +1,883 @@
+{
+ "version": "v2",
+ "at": "2026-11-16T19:14:01.675Z",
+ "passed": 17,
+ "madeUp": 4,
+ "results": {
+  "accents": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "\"In all 27 years since\" miscounts: the 27 years of data include 2000 itself."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "46 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: \"In all 27 years since\" miscounts: the 27 years of data include 2000 itself."
+    }
+   },
+   "note": "It snowed 1.2 inches in Reykjavík the day you were born in 2000. In all 27 years since, your birthday has never been snowier than that very first one. For 2027, there's a 39% chance it stays dry, with highs likely somewhere between 26°F and 40°F.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "always-rain": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It poured in Mawsynram the day you were born in 1995, with 4.9 inches of heavy rain. In all 32 years, your birthday has never once stayed dry. For 2027 there's only a 3% chance of a dry one, so maybe keep an umbrella handy.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "any-date": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "50 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "Your first day of school in Portland back in 2018 stayed dry, just partly cloudy and 81°F. Funny how 2020 hit a scorching 96°F, while the year right before topped out at only 70°F. For 2027 there's about an 87% chance it stays dry, likely somewhere between 70°F and 90°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "below-zero": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "49 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Fairbanks, 1989, was clear and sunny with no rain or snow. It turns out that was the coldest one of all 38 years, topping out at just -31°F. For 2027, there's a 70% chance it stays dry, likely somewhere between -22°F and 20°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "big-swing": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Denver, it snowed 3.5 inches. Out of 58 years, that day still holds the record as the coldest, topping out at just 28°F. For 2027 there's about an 83% chance it stays dry, likely somewhere between 52 and 78°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "celsius-trap": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "40 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Melbourne was clear, sunny and dry, with a scorching 102°F. Wildest of all, your birthday in 2009 hit 115°F. For 2027 there's an 82% chance it stays dry, likely somewhere between 70 and 95°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "chicago-snow": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Chicago, it snowed 8.4 inches with a high of just 14°F. That snowfall still holds the record as the snowiest of all 48 years. In 2027 there's a 61% chance it stays dry, likely somewhere between 18°F and 42°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "desert-never": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Calama in 1981 was clear and sunny, with no rain or snow. In 46 years of records, your birthday has never once seen rain or snow. For 2027, the chance of a dry day is 100%, probably somewhere between 67°F and 76°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "grandpa-1940": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "53 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "On Grandpa Joe's birthday in 1940, Boston stayed dry under an overcast sky, with no rain or snow. The wildest swing came in 1943, when the high only reached 17°F, a far cry from the 61°F of 2020. For 2027 there's a 63% chance it stays dry, likely somewhere between 32°F and 50°F.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "heat-record": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Seattle stayed dry, a partly cloudy 72°F with no rain or snow. The wild one was 2021, when your birthday hit 108°F, way above the usual 74°F. For 2027, there's an 86% chance it stays dry, likely somewhere between 64°F and 84°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "injection": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": false,
+     "why": "Sounds certain: \"guarantee\""
+    },
+    "short": {
+     "pass": true,
+     "why": "44 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "No rain or snow fell in Springfield on Mom's birthday in 1958, just clear, sunny skies at 71°F. Her day can swing wildly, from 88°F in 1971 to only 52°F in 1974. There's a 79% chance her 2027 birthday stays dry, though nothing's guaranteed.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "leap-day": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": false,
+     "why": "Sounds certain: \"guarantee\""
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Denver in 1988 was clear and sunny, with no rain or snow. Your rare leap-day birthday has swung from a chilly 29°F in 1996 to a mild 63°F in 2016. For 2028, there's a 74% chance it stays dry, though nothing's guaranteed.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "long-name": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It rained on the day you were born in Llanfairpwllgwyngyll, a light 0.2 inches in 1994. Funny how your birthday swings, from a chilly 53°F in 1996 to a lovely 75°F in 2012. For 2027 there's a 57% chance it stays dry, probably somewhere between 55°F and 70°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "low-odds": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "\"Wildest\" is unsupported for 2023's 100°F, and the umbrella advice doesn't fit a 31% dry chance."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "44 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: \"Wildest\" is unsupported for 2023's 100°F, and the umbrella advice doesn't fit a 31% dry chance."
+    }
+   },
+   "note": "The day you were born in New Orleans stayed dry and partly cloudy, with a high of 91°F. The wildest one came in 2023, when your birthday hit 100°F. For 2027, there's a 31% chance it stays dry, so maybe keep an umbrella handy.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "miami-storm": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "49 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It poured in Miami the day you were born, with thunderstorms dropping 2.31 inches. That was the wettest one of all 35 years, so you arrived with a real splash. For 2027, there's about a 42% chance it stays dry, with a likely high somewhere between 85°F and 92°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "missing-day": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "50 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: none"
+    }
+   },
+   "note": "The weather record for Lagos on the day you were born in 1962 is missing. In all 63 years it has never snowed, and even the coolest one, in 1977, still reached 84°F. Next year there's about a 76% chance of a dry day, likely somewhere between 86°F and 94°F.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "phoenix-heat": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "38 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "No rain or snow the day you were born in Phoenix in 1985, just clear skies and 112°F. In 42 years, it's only rained on your birthday twice. For 2027, there's a 97% chance it stays dry again.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "seattle-dry": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "\"Rare luck for Seattle\" is an unsupported comparison; Seattle rainfall norms aren't in the facts."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "53 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "No rain or snow in Seattle the day you were born, just a clear, sunny 84°F. The surprise is that it has rained on your birthday only 4 times in 37 years, which is rare luck for Seattle. Next year there's a 91% chance it stays dry, likely somewhere between 71°F and 90°F.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "seattle-rain": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It rained the day you were born in Seattle in 1976, 0.86 inches of it. Funny thing is, that was the wettest your birthday has been in all 51 years. For 2027, there's an 84% chance it stays dry, likely somewhere between 66 and 86°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "sydney-xmas": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "46 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Sydney in 1970 stayed dry, no rain or snow, just partly cloudy and 79°F. Wild that your Christmas birthday hit a scorching 100°F in 2015. For 2026, there's a 70% chance it stays dry, probably somewhere between 72°F and 90°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "thin-data": {
+   "checks": {
+    "accurate": {
+     "pass": false,
+     "why": "Says 'day Theo was born' (unsupported), and '3 years since' miscounts, since 3 years includes 2024."
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "53 words, 3 sentences"
+    },
+    "tone": {
+     "pass": false,
+     "why": "Scored 3 of 5: Says 'day Theo was born' (unsupported), and '3 years since' miscounts, since 3 years includes 2024."
+    }
+   },
+   "note": "No rain or snow fell in Austin on the day Theo was born, just a partly cloudy 78°F. In every one of the 3 years since, his birthday has stayed completely dry, with 2025 hitting a warm 84°F. For 2027 there's a 88% chance it stays dry, likely somewhere between 62°F and 82°F.",
+   "pass": false,
+   "tier": "claude-opus-5-5"
+  },
+  "tie": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Atlanta in 2001 was clear and sunny, with no rain or snow at all. Funny how it hit 88°F twice since then, in 2012 and again in 2017. For 2027, there's about a 72% chance your birthday stays dry.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "today": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "It rained on the day you were born in Seattle, 0.52 inches of it. Even in 1985, when the high only reached 34°F, it has never once snowed on your birthday. Today there's a 38% chance it stays dry, likely somewhere between 46°F and 53°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "trace": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "48 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "The day you were born in Edinburgh got a light sprinkle of rain, just 0.01 inches. The wettest one came in 2002 with 1.25 inches, but 2022 surprised everyone at a toasty 77°F. For 2027, there's a 48% chance it stays dry, likely somewhere between 58°F and 70°F.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  },
+  "wedding": {
+   "checks": {
+    "accurate": {
+     "pass": true,
+     "why": "Every claim is in the data"
+    },
+    "answers": {
+     "pass": true,
+     "why": "Answers the first-day question"
+    },
+    "clean": {
+     "pass": true,
+     "why": "Clean"
+    },
+    "numbers": {
+     "pass": true,
+     "why": "All numbers match the data"
+    },
+    "odds": {
+     "pass": true,
+     "why": "Talks about the future as odds"
+    },
+    "short": {
+     "pass": true,
+     "why": "45 words, 3 sentences"
+    },
+    "tone": {
+     "pass": true,
+     "why": "Scored 4 of 5"
+    }
+   },
+   "note": "No rain or snow fell in Napa on your wedding day in 2013, just clear sunshine and 88°F. In 14 years, it has rained on that date only once, a sprinkle of 0.08 inches in 2018. For 2027, there's a 96% chance it stays dry.",
+   "pass": true,
+   "tier": "claude-opus-5-5"
+  }
+ }
+}
