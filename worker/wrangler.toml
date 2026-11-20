@@ -7,7 +7,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [vars]
 # Only these pages may call the backend.
-ALLOWED_ORIGINS = "https://mmaislen.github.io"
+ALLOWED_ORIGINS = "https://mmaislen.github.io,https://michellemaislen.com,https://www.michellemaislen.com"
 
 # 10 notes a minute per visitor is plenty for a person and stops scripts.
 [[ratelimits]]
